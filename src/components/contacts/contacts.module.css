@@ -1,0 +1,36 @@
+.item {
+    display: flex;
+    align-items: center;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .input {
+    padding: 10px;
+    font-size: 15px;
+    width: 30%;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    margin: 0;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    width: auto;
+  }
+  .button {
+    display: block;
+    background-color: #fff;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 182, 182);
+    
+  }
