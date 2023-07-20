@@ -7,7 +7,7 @@ import { selectContacts } from 'redux/selectors';
 
 export const Form = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setPhone] = useState('');
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   
@@ -18,7 +18,7 @@ export const Form = () => {
         setName(e.currentTarget.value);
         break;
         
-      case 'phone':
+      case 'number':
         setPhone(e.currentTarget.value);
         break;
       
@@ -31,7 +31,7 @@ export const Form = () => {
     e.preventDefault();
 const data = {
   name,
-  phone,
+  number,
 };
 if ( contacts.find(
   contact => contact.name.toLowerCase() === data.name.toLowerCase()
@@ -59,7 +59,7 @@ if ( contacts.find(
             placeholder="input contact name"
             name="name"
             value={name}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+            pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             onChange={inputChange}
             required
@@ -72,9 +72,9 @@ if ( contacts.find(
             className={css.input}
             type="tel"
             placeholder="input contact phone"
-            name="phone"
-            value={phone}
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            name="number"
+            value={number}
+            pattern="\+?\d{1,4}?[\-.\s]?\(?\d{1,3}?\)?[\-.\s]?\d{1,4}[\-.\s]?\d{1,4}[\-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             onChange={inputChange}
             required

@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Button:first-child {
+    margin-right: auto;
+    
+} 
+
+.Text {
+    color: #2a363b;
+    font-weight: 700;
+}
+
+
+
