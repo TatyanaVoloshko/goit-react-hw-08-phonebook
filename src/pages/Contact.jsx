@@ -10,6 +10,7 @@ import {
   selectIsLoading 
 } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
+import css from './Contact.module.css'
 
 export const Contact = () => {
     const contacts = useSelector(selectFilteredContacts);
@@ -22,13 +23,11 @@ export const Contact = () => {
  
   return (
     <div>
-    <h2>Phonebook</h2>
     <Form />
     {isLoading && <p>Loading...</p>}
     {error && <p>{error}</p>}
-    <h2>Contacts</h2>
     <Filter/>
-   {contacts.length > 0  ? <Contacts /> : <p>Contact not found</p>}
+   {contacts.length > 0  ? <Contacts /> : <p className={css.text}>Contact not found</p>}
    </div>
   )
 }

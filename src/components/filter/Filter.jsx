@@ -1,4 +1,4 @@
-import css from './filter.module.css';
+import css from '../RegisterForm/RegisterForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilter } from 'redux/selectors';
 import { setFilter } from 'redux/filterSlice';

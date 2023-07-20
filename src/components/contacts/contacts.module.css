@@ -1,36 +1,46 @@
 .item {
     display: flex;
     align-items: center;
+    
   }
   .item:not(:last-child) {
     margin-bottom: 10px;
   }
   .input {
+    display: block;
     padding: 10px;
     font-size: 15px;
-    width: 30%;
-  }
-  .label {
-    display: flex;
-    flex-direction: column;
-  }
-  .text {
-    margin: 0;
-    display: inline-block;
-    background-color: #fff;
-    padding: 10px;
-    font-size: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+   
     line-height: 40px;
     border-width: 0;
     border-radius: 20px;
-    width: auto;
+    margin-top: 15px;
+    background-image: linear-gradient(to bottom, #3b64a0 0%, #e0dc53 100%);
+  }
+  
+  .text {
+    display: flex;
+    padding: 10px;
+   
+    margin-bottom: 15px;
+   color: #0066ff;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    margin-top: 15px;
+    background-image: linear-gradient(to bottom, #3b64a0 0%, #e0dc53 100%);
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
   }
   .button {
-    display: block;
-    background-color: #fff;
     padding: 5px;
-    margin-left: 20px;
     border-radius: 5px;
-    border: 1px solid rgb(187, 182, 182);
-    
   }
