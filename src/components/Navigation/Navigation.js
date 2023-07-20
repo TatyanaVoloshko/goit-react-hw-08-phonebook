@@ -1,21 +1,23 @@
 import { useAuth } from 'hooks';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-  
+import css from './Navigation.module.css';
+import Box from '@mui/material/Box';
+
 
 export const Navigation = () => {
-    const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
   return (
-<nav>
-<NavLink to="/">
+    <Box sx={{ flexGrow: 1 }} >
+      
+      <NavLink to="/" className={css.Link}>
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink to="/contact">
+        <NavLink to="/contact" className={css.Link}>
           Contacts
         </NavLink>
       )}
-    
-</nav>
-  )
-}
+    </Box>
+  );
+};

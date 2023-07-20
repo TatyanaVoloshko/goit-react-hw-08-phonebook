@@ -5,17 +5,20 @@ import { useAuth } from 'hooks';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import css from '../SharedLayout/SharedLayout.module.css'
+import Typography from '@mui/material/Typography';
+
 
 
 export const AppBarComponent = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-   <Box>
-    <AppBar position="static" color="" className={css.Button}>
-         <Toolbar className={css.Bar} sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} >
+     <AppBar position="static" >
+     <Toolbar>
+     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
       <Navigation />
+      </Typography>
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Toolbar>
      </AppBar>

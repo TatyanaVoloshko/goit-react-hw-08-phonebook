@@ -16,7 +16,7 @@ export const Home = () => {
     >
        <h1 className={css.Title}>
       Convenient contact list {' '}
-     <ContactPhoneIcon sx={{ fontSize: 30 }} color="primary"/>
+     <ContactPhoneIcon sx={{ fontSize: 30 }} />
      </h1>
     </Box>
     </div>

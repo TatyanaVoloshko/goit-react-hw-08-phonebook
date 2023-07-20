@@ -1,0 +1,14 @@
+.Link {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    color: rgb(232, 232, 88);
+    
+    
+}
+
+.Link:not(:last-child) {
+    margin-right: 20px;
+}
