@@ -12,7 +12,7 @@ import {
 import { fetchContacts } from 'redux/operations';
 import css from './Contact.module.css'
 
-export const Contact = () => {
+const Contact = () => {
     const contacts = useSelector(selectFilteredContacts);
     const isLoading = useSelector(selectIsLoading);
     const error = useSelector(selectError);
@@ -30,4 +30,8 @@ export const Contact = () => {
    {contacts.length > 0  ? <Contacts /> : <p className={css.text}>Contact not found</p>}
    </div>
   )
-}
+};
+
+export default Contact;
+
+

@@ -1,7 +1,7 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm'
 import React from 'react'
 
-export const Register = () => {
+ const Register = () => {
   return (
     <div>
       <div>
@@ -10,5 +10,7 @@ export const Register = () => {
       <RegisterForm />
     </div>
   )
-}
+};
+
+export default Register;
 

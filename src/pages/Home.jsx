@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import css from './Home.module.css'
 
 
-export const Home = () => {
+ const Home = () => {
   return (
     <div className={css.Box}>
         <Box 
@@ -23,3 +23,5 @@ export const Home = () => {
   
   )
 }
+
+export default Home;
